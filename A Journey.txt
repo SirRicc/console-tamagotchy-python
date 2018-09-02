@@ -1,0 +1,13 @@
+
+#Problems And Solutions
+
+A couple minuntes ago I completed my basic game which works like this:
+-Give your Dog a name
+-He gets older
+-Nobody can feed him yet
+-He gets older
+-He dies from starvation
+
+I need an interface to feed him! My first idea was to add an interact function onto the end my gameloop.
+This interact function should take an input, check it against some preset values, may execute 
+some code (while not pausing my gameloop) and continue. But as you might guess, - it paused.
