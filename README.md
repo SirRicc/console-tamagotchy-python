@@ -1,2 +1,9 @@
 # Console-Tamagotchy-Python
-A command line Tamagotchy
+Welcome to my beginner project.
+I want to create a basic Tamagotchy to practice some OOP.
+
+# Status
+He dies from starvation.
+
+# TODO:
+-Get console input to keep this dog alive!
