@@ -27,3 +27,9 @@ Research:
 	},
 	"newToMe": "absolute"
 }
+
+
+Threading turned out to be an overall usefull mechanic, but the most usefull part for me is that I can listen to 
+an input while still execute the gameloop.
+Let's outsource my interact function to a new .py file called event_listener and run both of them simultaniously.
+Afterwards they should be able to communicate.
