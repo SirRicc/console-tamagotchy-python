@@ -7,3 +7,4 @@ He dies from starvation.
 
 # TODO:
 -Get console input to keep this dog alive!
+++Outsource interact() to run it as own thread
