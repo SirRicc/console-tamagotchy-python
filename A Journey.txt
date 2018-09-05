@@ -33,3 +33,14 @@ Threading turned out to be an overall usefull mechanic, but the most usefull par
 an input while still execute the gameloop.
 Let's outsource my interact function to a new .py file called event_listener and run both of them simultaniously.
 Afterwards they should be able to communicate.
+
+After experimenting alot with threads while gaining even more knowledge how to not deal with them, I made a partial victory!
+But first things first.
+Dealing with global variables is akward when you learned JS first and I hope there is a better solution to this 
+instead of using them to get things working.
+BUT (!) my prototype is runing without breaking the main loop/thread. C:
+It's still a little buggy because we have a 50/50 chanche to process my input given by my while loop which is not an own thread.
+I guess I need to .lock & release .release() my data while mutate them to work in a 100% way but I can't wait to implement it!
+
+
+
