@@ -1,42 +1,45 @@
-import time
+
+import sys
+
+lock = threading.Lock()
 
 MAXMONTH = 72
 INTERVALL = 10
 
 class Dog():
     def __init__(self):
-        self.name = input("Give him a name: ")
-        self.month = 0
+        print("Staring Tamagotchy")
+        self.name = raw_input("dog name> ")
         self.running = True
-        self.hungry = 7
-    
-    #Not working yet
-    def feed(self):
-        if self.hungry < 10:
-            print("TastyWoof!")
-        else:
-            print("He don´t want to eat.")
-    
-    #Display basic imformations
-    def stats(self):
-        print("His name is :" , self.name)
-        print("Your dog is " , self.month , "months old.")
-        print("His hungry level is: " , self.hungry)
-        print(" ")
-    
-    #Very basic game-loop
-    def run(self):
-        while self.running == True:
-            if self.month > MAXMONTH or self.hungry <= 0:
-                print("RIP Dog")
-                self.runing = False
-                break
-            else:
-                self.stats()
-                self.month += 1
-                self.hungry -= 2
-                time.sleep(INTERVALL)
+        self.hungry = 3
 
-#Summon a dog!
+    def feed(self):
+        self.hungry += 3
+        self.stats()
+
+    def stats(self):
+        print(self.hungry)
+        print(self.name)
+
+    def quit(self):
+        self.runing = False
+        sys.exit()
+
+    def run(self):
+        while self.running == True & self.hungry >= 0:
+            input = raw_input()
+            if input == "quit":
+                quit()
+                sys.exit()
+            elif input == "feed":
+                self.feed()
+            elif input == "stats":
+                self.stats()
+            else:
+                print("no valid input")
+
+
 d = Dog()
-d.run()
+d.start()
+
+#python3 ~/dev/python/tamagotchy/main.py
