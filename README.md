@@ -3,8 +3,11 @@ Welcome to my beginner project.
 I want to create a basic Tamagotchy to practice some OOP.
 
 # Status
-He dies from starvation.
+Time is standing still
 
 # TODO:
--Get console input to keep this dog alive!
-++Outsource interact() to run it as own thread
+-Fix time to rescue the world!
+
+# DONE:
++Get console input to keep this dog alive!
+
