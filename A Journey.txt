@@ -37,7 +37,7 @@ Research:
 
 
 Threading turned out to be an overall usefull mechanic, but the most usefull part for me is that I can listen to 
-an input while still execute the gameloop.
+an input while still execute the game loop.
 Let's outsource my interact function to a new .py file called event_listener and run both of them simultaniously.
 Afterwards they should be able to communicate.
 
@@ -86,6 +86,15 @@ Thanks to github.com/potzpf , he really helped me out on this one.
 
 Now it's time to make this game more ... alive.
 Better prepare for a print() raid!
+
+
+
+For now we have more Text in there to make it look nicer, a help function, the ability to feed him aslike an 
+option to quit the game.
+What I need now is a mechanism to decrease different values over time.
+Living in a world without gettin' hungry may look like a nice place to be but in a game with a feed mechanic, things can be very
+boring very soon.
+
 
 
 
