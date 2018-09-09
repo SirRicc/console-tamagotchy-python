@@ -1,3 +1,5 @@
+#I decided to throw this threading idea for a simpler game loop
+
 import threading
 import time
 import sys
