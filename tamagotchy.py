@@ -1,45 +1,62 @@
 
 import sys
-
-lock = threading.Lock()
-
-MAXMONTH = 72
-INTERVALL = 10
+import datetime
+import time
 
 class Dog():
     def __init__(self):
-        print("Staring Tamagotchy")
-        self.name = raw_input("dog name> ")
+        print "Staring Tamagotchy \n"
+        self.name = raw_input("How do you call him?  \n")
+        print "\nWelcome to I´m bad with names!.\nRaise %s and become best friends \n" % (self.name,)
+        print "Write  help  to view your commands"
         self.running = True
-        self.hungry = 3
+        self.hungry = 1
 
+    #Incremnting self.hungry causes to end my while loop down here.
     def feed(self):
-        self.hungry += 3
-        self.stats()
+        self.hungry += 1
+        print "~TastyBark\n"
+
+    def help(self):
+        print "stats\nfeed\nquit\n"
 
     def stats(self):
-        print(self.hungry)
-        print(self.name)
+        print "\n\n    ~OVERVIEW~\nHis name is: ", self.name
+        print "Hungry level at: ", self.hungry, "\n\n"
 
     def quit(self):
         self.runing = False
         sys.exit()
 
+    def input(self):
+        input = raw_input()
+        if input == "quit":
+            quit()
+            sys.exit()
+        if input == "help":
+            self.help()
+        elif input == "feed":
+            self.feed()
+        elif input == "stats":
+            self.stats()
+        else:
+            print "no valid input"
+
+    #Timer is not executing well
+    def timer(self):
+        t = datetime.datetime.now()
+        if  t.second % 6 == 0:
+            self.stats()
+            time.sleep(1)
+
+    #Handle starvation in another way - Look Line20.
     def run(self):
-        while self.running == True & self.hungry >= 0:
-            input = raw_input()
-            if input == "quit":
-                quit()
-                sys.exit()
-            elif input == "feed":
-                self.feed()
-            elif input == "stats":
-                self.stats()
-            else:
-                print("no valid input")
+        while self.running == True: # & self.hungry > 0:
+            self.input()
+            #self.timer()
+
 
 
 d = Dog()
-d.start()
-
-#python3 ~/dev/python/tamagotchy/main.py
+d.run()
+#python ~/dev/python/tamagotchy/main.py
