@@ -20,6 +20,8 @@ Stuff's doin' what it should doin'.
 
 -Put age back in place
 
+-Pause game
+
 
 # DONE:
 +Get console input to keep this dog alive!
