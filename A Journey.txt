@@ -97,6 +97,9 @@ boring very soon.
 
 
 
+I dived a lil' depper into threads because I just run into my lovley old problem:
+Not gettin' input while executing ANY kind of loop.
+Checkout my new commit. It's pretty self explaining and WÖÖRKING !
 
 
 
