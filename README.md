@@ -4,11 +4,15 @@ I want to create a basic Tamagotchy to practice some OOP.
 
 
 # Status
-Stuff's doin' what it should doin'.
+Run in it´s very basic mechanics.
+Still needs a lot of work.
 
 
 # TODO:
 -Daemonize threads so they shutdown when main thread exit.
+
+-OOP
+--start all over
 
 -JSON
 --When starting and savegame is found, load it & skip welcome()
