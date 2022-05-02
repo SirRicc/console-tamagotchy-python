@@ -1,6 +1,6 @@
 # Console-Tamagotchy-Python
 Welcome to my beginner project.
-I want to create a basic Tamagotchy to practice some OOP.
+I want to create a basic Tamagotchy.
 
 
 # Status
